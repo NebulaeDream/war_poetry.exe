@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>战争诗歌：断层绝句</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game-canvas"></canvas>
+
+  <!-- 顶部 HUD -->
+  <div id="hud">
+    <span id="silver-label">军饷：-- 两</span>
+    <span id="kills-label">缴获：0 人</span>
+  </div>
+
+  <!-- 部署阶段按钮 -->
+  <button id="btn-recruit">招募清军通用兵（2两白银）</button>
+  <button id="btn-start">开 战 ！💥</button>
+
+  <!-- 战斗阶段：指挥组 -->
+  <div id="battle-btns">
+    <button id="btn-command">指 挥🗡️</button>
+    <button id="btn-hold">死 守⚔️</button>
+    <button id="btn-surrender">投 降🏳️</button>
+  </div>
+
+  <!-- 横屏提示 -->
+  <div id="rotate-hint" class="hidden">
+    <div>📱 建议横屏游玩<br>把手机转过来，排兵布阵更顺手</div>
+  </div>
+
+  <!-- 命名战役 -->
+  <div id="naming-overlay" class="hidden">
+    <h2>给这场战役起个名字</h2>
+    <p class="tip">（胜了是流芳百世，败了是遗臭万年）</p>
+    <input id="battle-name-input" type="text" maxlength="12"
+           placeholder="例如：八里桥之战" autocomplete="off">
+    <div class="naming-row">
+      <button id="btn-name-ok">就用它，开战！</button>
+      <button id="btn-name-cancel">再想想……</button>
+    </div>
+  </div>
+
+  <!-- 结算 -->
+  <div id="end-overlay" class="hidden">
+    <h1 id="end-title"></h1>
+    <p id="end-sub"></p>
+    <button id="btn-restart">再来一曲《战争诗歌》</button>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="utils.js"></script>
+  <script src="units.js"></script>
+  <script src="ai.js"></script>
+  <script src="game.js"></script>
+  <script src="render.js"></script>
+  <script src="input.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
